@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Addblog</string>
+    <string name="web_client_id">1077670179133-u4ak9qlsoik3lhqkec6vs4lr8ti7o37n.apps.googleusercontent.com</string>
+
+
+    <array name="tag">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>Google</item>
+        <item>Pixel Phone</item>
+        <item>Samsung</item>
+        <item>Nokia</item>
+        <item>Facebook</item>
+        <item>Whatsapp</item>
+        <item>Twitter</item>
+        <item>Gmail</item>
+        <item>Google Chrome</item>
+        <item>Apple</item>
+    </array>
+
+    <array name="category">
+        <item>News</item>
+        <item>Tips and Tricks</item>
+        <item>Review</item>
+        <item>New Launches</item>
+        <item>App and Games</item>
+        <item>Tech Spark</item>
+    </array>
+
+</resources>

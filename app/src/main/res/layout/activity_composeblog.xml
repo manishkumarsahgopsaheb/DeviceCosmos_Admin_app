@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".composeblog"
+    android:background="#ffffff">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardref_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cancel_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/cancle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:layout_toRightOf="@id/cancel_id"
+                android:text="Compose Blog"
+                android:textColor="#0B28BE"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/post_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/send" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lastcard_id"
+        android:layout_below="@+id/cardref_id">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/prof_id"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/person" />
+
+            <TextView
+                android:id="@+id/texttag_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tagged In"
+                android:layout_toRightOf="@id/prof_id"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <Spinner
+                android:id="@+id/tagspiiner_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_toRightOf="@id/texttag_id"
+                android:entries="@array/tag"
+                ></Spinner>
+
+
+            <Spinner
+                android:id="@+id/categoryspinner_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_below="@id/tagspiiner_id"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:entries="@array/category"
+                android:layout_toRightOf="@id/categorytext_id"></Spinner>
+
+            <TextView
+                android:id="@+id/categorytext_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_below="@id/tagspiiner_id"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/prof_id"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="1dp"/>
+
+            <EditText
+                android:id="@+id/editheading_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoryspinner_id"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/rectangleshape"
+                android:hint="Write Heading maximum of 10 to 15 words"
+                />
+
+            <EditText
+                android:id="@+id/linktext_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editheading_id"
+                android:layout_margin="10dp"
+                android:hint="Insert the Link"
+                android:padding="5dp"
+                android:background="@drawable/rectangleshape"
+                />
+
+            <EditText
+                android:id="@+id/description_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linktext_id"
+                android:hint="Write Descriptions about heading maximum of 200 to 250 words"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@drawable/rectangleshape"
+                />
+
+            <ImageView
+                android:id="@+id/upload"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_below="@id/description_id"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitXY" />
+
+
+
+            <TextView
+                android:id="@+id/timepost_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upload"
+                android:layout_marginLeft="14dp"
+                android:text="time"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/datepost_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upload"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="date"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <DatePicker
+                android:id="@+id/datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></DatePicker>
+
+            <TimePicker
+                android:id="@+id/timepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></TimePicker>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/lastcard_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#36A7A69C"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choose"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="2dp"
+                android:text="Gallery" />
+
+            <ImageView
+                android:id="@+id/choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/camera_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Take Photo" />
+
+            <ImageView
+                android:id="@+id/camera_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/video_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/videocamera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/video_id"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="30dp"
+                android:text="Video" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
